@@ -57,7 +57,7 @@ library Combinatorics {
      * @return A list of lists where the sublists are combinations of `list`. The length of the
      * output array is `numCombinations(list.length, r)`.
      */
-    function combinations(bytes32[] memory list, uint256 r) public pure returns (bytes32[][] memory) {
+    function combinations(bytes32[] memory list, uint256 r) internal pure returns (bytes32[][] memory) {
 
         require(r > 0, "Sample size must be non-zero");
 
@@ -115,7 +115,7 @@ library Combinatorics {
      * @return A list of lists where the sublists are combinations of `list`. The length of the
      * output array is `numCombinations(list.length, r)`.
      */
-    function combinations(uint256[] memory list, uint256 r) public pure returns (uint256[][] memory) {
+    function combinations(uint256[] memory list, uint256 r) internal pure returns (uint256[][] memory) {
 
         require(r > 0, "Sample size must be non-zero");
 
@@ -173,7 +173,7 @@ library Combinatorics {
      * @return A list of lists where the sublists are combinations of `list`. The length of the
      * output array is `numCombinations(list.length, r)`.
      */
-    function combinations(bool[] memory list, uint256 r) public pure returns (bool[][] memory) {
+    function combinations(bool[] memory list, uint256 r) internal pure returns (bool[][] memory) {
 
         require(r > 0, "Sample size must be non-zero");
 
@@ -224,7 +224,7 @@ library Combinatorics {
     }
 
     // TODO
-    // function permutations(bytes32[] memory list, uint256 r) public pure returns (bytes32[][] memory) 
+    // function permutations(bytes32[] memory list, uint256 r) internal pure returns (bytes32[][] memory) 
 
     /**
      * @notice Cartesian product or an array with itself `repeat` times.
@@ -234,7 +234,7 @@ library Combinatorics {
      * @return A list of lists where the sublists are combinations of the values in the input list
      * of length `repeat`. The length of the output array is `list.length**repeat`.
      */
-    function product(bytes32[] memory list, uint256 repeat) public pure returns (bytes32[][] memory) {
+    function product(bytes32[] memory list, uint256 repeat) internal pure returns (bytes32[][] memory) {
         
         require(repeat > 0, "Number of repeat must be non-zero");
 
@@ -284,7 +284,7 @@ library Combinatorics {
      * @return A list of lists where the sublists are combinations of the values in the input list
      * of length `repeat`. The length of the output array is `list.length**repeat`.
      */
-    function product(uint256[] memory list, uint256 repeat) public pure returns (uint256[][] memory) {
+    function product(uint256[] memory list, uint256 repeat) internal pure returns (uint256[][] memory) {
         
         require(repeat > 0, "Number of repeat must be non-zero");
 
@@ -334,7 +334,7 @@ library Combinatorics {
      * @return A list of lists where the sublists are combinations of the values in the input list
      * of length `repeat`. The length of the output array is `list.length**repeat`.
      */
-    function product(bool[] memory list, uint256 repeat) public pure returns (bool[][] memory) {
+    function product(bool[] memory list, uint256 repeat) internal pure returns (bool[][] memory) {
         
         require(repeat > 0, "Number of repeat must be non-zero");
 
